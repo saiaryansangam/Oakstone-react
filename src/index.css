@@ -1,0 +1,917 @@
+/* ==========================================================
+   CSS Resets & Variables
+   ========================================================== */
+
+:root {
+    /* Color Palette */
+    --primary-navy: #243B63;
+    --primary-navy-dark: #1A2E50;
+    --gold-accent: #C6A66A;
+    --light-grey: #F3F4F6;
+    --how-we-work-bg: #F4F7FB;
+    --dark-text: #1F2937;
+    --hero-overlay: rgba(0,0,0,0.45);
+    --footer-bg: #203A66;
+    --white: #FFFFFF;
+    
+    /* Typography */
+    --font-heading: 'Libre Baskerville', serif;
+    --font-body: 'Crimson Pro', serif;
+    
+    /* Spacing & Layout */
+    --max-width: 1200px;
+    --max-width-medium: 900px;
+    --max-width-narrow: 800px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--dark-text);
+    background-color: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-navy);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* ==========================================================
+   Layout & Container Utilities
+   ========================================================== */
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.container-medium {
+    max-width: var(--max-width-medium);
+}
+
+.container-narrow {
+    max-width: var(--max-width-narrow);
+}
+
+/* ==========================================================
+   Navbar
+   ========================================================== */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.25); /* Semi transparent dark overlay */
+}
+
+.nav-container {
+    max-width: 1400px; /* Slightly wider for the header */
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.logo-text h1 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 2px;
+    font-weight: 400;
+}
+
+.logo-subtext {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    display: block;
+    color: var(--white);
+    opacity: 0.8;
+}
+
+/* Placeholder for the left logo icon */
+.logo-icon {
+    width: 24px;
+    height: 24px;
+    border: 1.5px solid var(--white);
+    border-radius: 50%;
+    margin-right: 12px;
+    position: relative;
+    border-top-color: transparent;
+    transform: rotate(45deg);
+}
+
+.logo-icon::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--white);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    color: var(--gold-accent);
+}
+
+.nav-links a.active {
+    color: var(--gold-accent);
+}
+
+/* ==========================================================
+   Hero Section
+   ========================================================== */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('hero.png');
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px; /* offset for navbar */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--hero-overlay);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    width: 100%;
+    padding-left: 60px;
+}
+
+.hero-content h2 {
+    color: var(--white);
+    font-size: 2.8rem;
+    line-height: 1.25;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 700px;
+    opacity: 0.9;
+}
+
+/* ==========================================================
+   Intro Statement Section
+   ========================================================== */
+
+.intro-statement {
+    background-color: #FFFFFF;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.intro-statement p {
+    font-size: 1.15rem;
+    color: var(--dark-text);
+    line-height: 1.8;
+}
+
+/* ==========================================================
+   Services Section
+   ========================================================== */
+
+.services {
+    padding: 100px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.service-col h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.service-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #E5E7EB; /* Subtle divider line */
+}
+
+.service-col p {
+    font-size: 1.05rem;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   How We Work Section
+   ========================================================== */
+
+.how-we-work {
+    background-color: var(--how-we-work-bg);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.how-we-work h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.how-we-work p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: var(--dark-text);
+}
+
+.how-we-work p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================
+   Call to Action Section
+   ========================================================== */
+
+.cta-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #EEF2F9; /* matching background roughly to visual balance */
+}
+
+.cta-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-navy);
+    color: var(--white);
+    padding: 15px 50px;
+    font-family: var(--font-body); /* Or could be Helvetica, matching generic styling */
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-navy-dark);
+}
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--white);
+    padding: 80px 0 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 40px;
+}
+
+.footer-col h3, 
+.footer-col h4 {
+    color: var(--white);
+    font-family: var(--font-heading);
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.footer-heading {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.footer-col p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.footer-col ul li a:hover {
+    opacity: 1;
+    color: var(--gold-accent);
+}
+
+/* ==========================================================
+   Capital Page Specifics
+   ========================================================== */
+
+/* The navbar on capital page does not sit on top of the hero image, 
+   instead it sits within a solid dark blue block alongside the intro. */
+.capital-navbar {
+    position: absolute; /* Revert to absolute to match home */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 15px 0;
+    background: transparent; /* Navbar itself is transparent */
+}
+
+.capital-intro {
+    background-color: var(--footer-bg); /* #203A66 */
+    color: var(--white);
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-size: cover;
+    background-position: center;
+}
+
+.capital-intro-container {
+    max-width: 900px;
+    margin: 0; /* Override generic container margin auto to align left */
+    /* Add padding to match the left alignment of the home page hero */
+    padding-left: 80px;
+}
+
+.capital-intro h2 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    color: #F8FAFC;
+    margin-bottom: 32px;
+}
+
+.capital-intro p {
+    font-family: var(--font-body);
+    font-size: 20px;
+    line-height: 1.6;
+    color: #E5E7EB;
+    max-width: 720px;
+    margin-top: 24px;
+}
+
+.capital-image-break {
+    background-image: url('stpauls.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 60vh;
+}
+
+.capital-what-we-do {
+    background-color: var(--light-grey);
+    padding: 100px 0;
+}
+
+.capital-what-we-do h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+/* Inherits .services-grid layout but we might define .service-col tweaks if necessary */
+.capital-what-we-do .service-col h3 {
+    font-size: 1.4rem;
+}
+
+.capital-focus {
+    background-color: var(--how-we-work-bg);
+    padding: 100px 0;
+}
+
+.capital-focus h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.capital-focus p {
+    font-size: 1.15rem;
+    color: var(--dark-text);
+    line-height: 1.8;
+}
+
+.capital-operating {
+    background-color: var(--light-grey);
+    padding: 100px 0;
+}
+
+.capital-operating h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.operating-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.operating-col p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--dark-text);
+    font-weight: 500;
+}
+
+/* Add bottom bar styles for footer */
+.footer-bottom-bar {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.7);
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-legal-links a:hover {
+    color: var(--white);
+}
+
+.footer-legal-links .divider {
+    opacity: 0.5;
+}
+
+/* ==========================================================
+   About Page Specifics
+   ========================================================== */
+
+.about-hero {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px; /* Offset for navbar */
+    color: var(--white);
+}
+
+.about-hero .hero-content {
+    max-width: 1000px;
+    padding-left: 60px;
+}
+
+.about-hero h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    line-height: 1.35;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.about-hero p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 800px;
+    opacity: 0.95;
+}
+
+.about-leadership {
+    background-color: var(--white);
+    padding: 100px 0;
+}
+
+.leadership-container {
+    max-width: 1100px; /* Wider text block */
+    text-align: center;
+}
+
+.leadership-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    text-align: left; /* Align title left according to the visual design, if it applies */
+}
+
+.leadership-container p {
+    font-size: 1.15rem;
+    color: var(--dark-text);
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.about-operate {
+    background-color: #F4F7FB; /* Equivalent to #9097A41A roughly visually */
+    padding: 100px 0;
+}
+
+.about-operate h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.operate-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.operate-col {
+    flex: 1;
+}
+
+.operate-col p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--dark-text);
+}
+
+.operate-divider {
+    width: 1px;
+    background-color: #D1D5DB; /* Subtle divider */
+    margin: 0 60px;
+    height: 120px;
+}
+
+.about-philosophy {
+    background-color: var(--white);
+    padding: 100px 0;
+}
+
+.philosophy-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.philosophy-content {
+    display: flex;
+}
+
+.philosophy-accent-line {
+    width: 2px;
+    background-color: var(--primary-navy);
+    margin-right: 30px;
+    min-height: 100%;
+}
+
+.philosophy-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--dark-text);
+}
+
+.about-contact {
+    background-color: #E6EDF7;
+    padding: 100px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.contact-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.contact-block {
+    margin-bottom: 40px;
+}
+
+.contact-block h3 {
+    font-size: 1.25rem;
+    color: var(--primary-navy);
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.contact-block p, .contact-block a {
+    font-size: 1.1rem;
+    color: var(--dark-text);
+    line-height: 1.6;
+    display: block;
+}
+
+.contact-block a {
+    margin-bottom: 5px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px; /* Align roughly with title on left */
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-bottom: 1px solid #CBD5E1;
+    background: transparent;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--dark-text);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-bottom-color: var(--primary-navy);
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+.form-submit {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+/* ==========================================================
+   Advisory Page Specifics
+   ========================================================== */
+
+.advisory-page .navbar {
+    background-color: #1A1F2E; /* Match hero background so it blends */
+    position: relative;
+    padding-bottom: 0px;
+}
+
+.advisory-hero {
+    background-color: #1A1F2E;
+    color: var(--white);
+    padding: 80px 0 120px;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.advisory-hero .container {
+    max-width: 1100px;
+}
+
+.advisory-heading {
+    color: var(--white);
+    font-size: 2.5rem;
+    line-height: 1.35;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.advisory-subheading {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 800px;
+    opacity: 0.95;
+    color: var(--white);
+}
+
+.advisory-focus {
+    background-color: var(--white);
+    padding: 100px 0;
+}
+
+.focus-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.focus-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.focus-left {
+    flex: 1;
+}
+
+.focus-left p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--dark-text);
+}
+
+.focus-divider {
+    width: 1px;
+    background-color: #D1D5DB;
+    margin: 0 80px;
+}
+
+.focus-right {
+    flex: 1.5;
+}
+
+.focus-list {
+    list-style: none;
+}
+
+.focus-list li {
+    font-size: 1.15rem;
+    color: var(--dark-text);
+    margin-bottom: 30px;
+    font-family: var(--font-body);
+}
+
+.focus-list li:last-child {
+    margin-bottom: 0;
+}
+
+.advisory-how-we-work {
+    background-color: #F4F7FB;
+    color: var(--dark-text);
+    padding: 120px 0;
+}
+
+.work-container h2 {
+    color: #203A66;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.work-content {
+    display: flex;
+}
+
+.work-accent-line {
+    width: 2px;
+    background-color: var(--gold-accent); /* Using the brand gold for the accent line as it contrasts well against the dark grey */
+    margin-right: 30px;
+    min-height: 100%;
+}
+
+.work-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--dark-text);
+    opacity: 0.95;
+}
+
+.advisory-image-break {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 70vh; /* Large full-width image */
+}
+
+/* ==========================================================
+   Responsive Design
+   ========================================================== */
+
+@media (max-width: 992px) {
+    .hero-content h2, .about-hero h2, .advisory-heading {
+        font-size: 2.2rem;
+    }
+    
+    .services-grid {
+        gap: 30px;
+    }
+
+    .contact-grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    
+    .nav-links {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .hero, .about-hero {
+        padding-top: 150px;
+        min-height: 70vh;
+    }
+    
+    .hero-content h2, .about-hero h2, .advisory-heading {
+        font-size: 1.8rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .operate-grid, .focus-grid {
+        flex-direction: column;
+    }
+
+    .operate-divider, .focus-divider {
+        width: 100%;
+        height: 1px;
+        margin: 40px 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
