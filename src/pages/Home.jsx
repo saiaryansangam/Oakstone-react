@@ -4,9 +4,9 @@ const Home = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="hero" style={{ minHeight: '100vh', backgroundImage: `url('/hero.png')` }}>
+      <section className="hero" style={{ minHeight: '100vh', backgroundImage: `url('about-hero1.jpg')` }}>
         <div className="hero-overlay"></div>
-        <div className="hero-content container" style={{ paddingLeft: '60px' }}>
+        <div className="hero-content container" style={{ paddingLeft: '100px' }}>
           <h2>A UK-anchored group operating<br/>internationally across capital, specialist<br/>finance and senior advisory.</h2>
           <p>Oakstone Partners works with professional partners, investors and businesses in situations where structure, capital and commercial judgement are decisive. The firm’s activities span curated fixed income and private credit strategies, specialist UK property finance, senior corporate and strategic advisory.</p>
         </div>

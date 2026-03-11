@@ -196,10 +196,12 @@ a {
 
 .hero-content h2 {
     color: var(--white);
-    font-size: 2.8rem;
-    line-height: 1.25;
+    font-size: 35px;
+    line-height: 40px;
     margin-bottom: 30px;
-    max-width: 800px;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: 0px;
 }
 
 .hero-content p {
@@ -240,10 +242,16 @@ a {
 }
 
 .service-col h3 {
-    font-size: 1.6rem;
+    font-family: 'Libre Baskerville', serif !important;
+    font-weight: 400 !important;
+    font-size: 30px !important;
+    line-height: 40px;
+    letter-spacing: 0px;
+    color: #203A66 !important;
     margin-bottom: 25px;
     padding-bottom: 20px;
     position: relative;
+    text-align: left;
 }
 
 .service-col h3::after {
@@ -273,8 +281,13 @@ a {
 }
 
 .how-we-work h2 {
-    font-size: 2.2rem;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0px;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .how-we-work p {
@@ -299,8 +312,12 @@ a {
 }
 
 .cta-section h2 {
-    font-size: 2.2rem;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .cta-section p {
@@ -344,6 +361,7 @@ a {
 .footer-col h4 {
     color: var(--white);
     font-family: var(--font-heading);
+    font-weight: 400;
 }
 
 .footer-title {
@@ -395,14 +413,13 @@ a {
     width: 100%;
     z-index: 100;
     padding: 15px 0;
-    background: transparent; /* Navbar itself is transparent */
+    background: rgba(0, 0, 0, 0.25); /* Semi transparent dark overlay to match other pages */
 }
 
 .capital-intro {
     background-color: var(--footer-bg); /* #203A66 */
     color: var(--white);
     min-height: 100vh;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -417,12 +434,13 @@ a {
     margin: 0; /* Override generic container margin auto to align left */
     /* Add padding to match the left alignment of the home page hero */
     padding-left: 80px;
+    
 }
 
 .capital-intro h2 {
     font-family: var(--font-heading);
     font-weight: 500;
-    font-size: 48px;
+    font-size: 30px;
     line-height: 1.2;
     letter-spacing: 0.2px;
     color: #F8FAFC;
@@ -430,12 +448,14 @@ a {
 }
 
 .capital-intro p {
-    font-family: var(--font-body);
-    font-size: 20px;
+    font-family: var(--font-heading);
+    font-size: 22px;
     line-height: 1.6;
     color: #E5E7EB;
-    max-width: 720px;
+    width: 830px;
     margin-top: 24px;
+    font-weight: 400;
+    height: 160px;
 }
 
 .capital-image-break {
@@ -443,7 +463,7 @@ a {
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 60vh;
+    min-height: 100vh;
 }
 
 .capital-what-we-do {
@@ -452,8 +472,14 @@ a {
 }
 
 .capital-what-we-do h2 {
-    font-size: 2.2rem;
+    font-size: 30px;
     margin-bottom: 50px;
+    font-family: var(--font-heading);
+    line-height: 40px;
+    font-weight: 400;
+
+
+
 }
 
 /* Inherits .services-grid layout but we might define .service-col tweaks if necessary */
@@ -464,17 +490,33 @@ a {
 .capital-focus {
     background-color: var(--how-we-work-bg);
     padding: 100px 0;
+    
+   
 }
 
 .capital-focus h2 {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
+    
+   
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-family: var(--font-heading);
+    line-height: 40px;
+    font-weight: 400;
+     
+   
 }
 
 .capital-focus p {
     font-size: 1.15rem;
     color: var(--dark-text);
     line-height: 1.8;
+    
+}
+.capital-focus .container,
+.capital-focus .container-medium {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
 }
 
 .capital-operating {
@@ -483,9 +525,15 @@ a {
 }
 
 .capital-operating h2 {
-    font-size: 2.2rem;
+   
+    
+    font-size: 30px;
     margin-bottom: 50px;
+    font-family: var(--font-heading);
+    line-height: 40px;
+    font-weight: 400;
 }
+
 
 .operating-grid {
     display: grid;
@@ -498,6 +546,7 @@ a {
     line-height: 1.8;
     color: var(--dark-text);
     font-weight: 500;
+    font-family: var(--font-heading);
 }
 
 /* Add bottom bar styles for footer */
@@ -529,12 +578,462 @@ a {
 }
 
 /* ==========================================================
+   Invest Page Specifics
+   ========================================================== */
+
+.invest-hero {
+    background-color: #1A2F4D;
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.invest-hero-container {
+    max-width: 1000px;
+    margin: 0;
+    padding-left: 80px;
+}
+
+.invest-hero h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    color: #F8FAFC;
+    margin-bottom: 32px;
+}
+
+.invest-hero p {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    line-height: 1.6;
+    color: #F8FAFC;
+    max-width: 720px;
+    margin-top: 24px;
+}
+
+.invest-image-break {
+    background-image: url('invest.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.invest-what-we-do {
+    background-color: #FFFFFF;
+    padding: 100px 0;
+}
+
+.invest-what-we-do-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.invest-what-we-do h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #2B3D4F;
+    margin-bottom: 50px;
+}
+
+.invest-what-we-do p {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #1F2937;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.invest-investment-strategies {
+    background-color: #F4F7FB;
+    padding: 100px 0;
+}
+
+.invest-investment-strategies-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.invest-investment-strategies h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #2B3D4F;
+    margin-bottom: 50px;
+}
+
+.invest-investment-strategies p {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #1F2937;
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+}
+
+.invest-strategies-grid {
+    background-color: #FFFFFF;
+    padding: 100px 0;
+}
+
+.invest-strategies-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.invest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+}
+
+.invest-col h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #2B3D4F;
+}
+
+.invest-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #E5E7EB;
+}
+
+.invest-subtitle {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6B7280;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.invest-col p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #1F2937;
+    margin-bottom: 20px;
+}
+
+.invest-how-access-works {
+    background-color: #F4F7FB;
+    padding: 100px 0;
+}
+
+.invest-how-access-works-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.invest-how-access-works h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #2B3D4F;
+    margin-bottom: 50px;
+}
+
+.invest-how-access-works p {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #1F2937;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.invest-governance-reporting {
+    background-color: #FFFFFF;
+    padding: 100px 0;
+}
+
+.invest-governance-reporting-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.invest-governance-reporting h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #2B3D4F;
+    margin-bottom: 50px;
+}
+
+.invest-governance-reporting p {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #1F2937;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.invest-visit {
+    background-color: #E6EDF7;
+    padding: 100px 0;
+}
+
+.invest-visit-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.invest-visit h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #2B3D4F;
+    margin-bottom: 20px;
+}
+
+.invest-visit p {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #1F2937;
+    margin-bottom: 40px;
+}
+
+.invest-contact-btn {
+    background-color: #243B63;
+    color: var(--white);
+    padding: 15px 50px;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.invest-contact-btn:hover {
+    background-color: var(--primary-navy-dark);
+}
+
+.invest-disclaimer {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.invest-disclaimer p {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #6B7280;
+    text-align: center;
+}
+
+/* ==========================================================
+   Finance Page Specifics
+   ========================================================== */
+
+.finance-hero {
+    background-color: #4A75C2;
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.finance-hero-container {
+    max-width: 1000px;
+    margin: 0;
+    padding-left: 80px;
+}
+
+.finance-hero h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    color: #F8FAFC;
+    margin-bottom: 32px;
+}
+
+.finance-hero p {
+    font-family: var(--font-heading);
+    font-size: 30px;
+    line-height: 45px;
+    color: #F8FAFC;
+    max-width: 720px;
+    margin-top: 24px;
+}
+
+.finance-image-break {
+    background-image: url('finance-city.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.finance-description {
+    background-color: #FFFFFF;
+    padding: 100px 0;
+}
+
+.finance-description-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.finance-description p {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    line-height: 33px;
+    color: var(--dark-text);
+    margin-bottom: 25px;
+}
+
+.finance-strategic {
+    background-color: #F4F7FB;
+    padding: 100px 0;
+}
+
+.finance-strategic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.finance-strategic h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #2B3D4F;
+    margin-bottom: 50px;
+}
+
+.finance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.finance-col h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    position: relative;
+    color: var(--primary-navy);
+}
+
+.finance-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    
+}
+
+.finance-grid .finance-col:last-child {
+    grid-column: 1 / -1;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.finance-col p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--dark-text);
+}
+
+.finance-visit {
+    background-color:#E6EDF7;
+    padding: 100px 0;
+}
+
+.finance-visit-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.finance-visit-label {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary-navy);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.finance-visit h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--primary-navy);
+}
+
+.finance-visit p {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark-text);
+    margin-bottom: 40px;
+}
+
+.finance-contact-btn {
+    background-color: #243B63;
+    color: var(--white);
+    padding: 15px 50px;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.finance-contact-btn:hover {
+    background-color: var(--primary-navy-dark);
+}
+
+/* ==========================================================
    About Page Specifics
    ========================================================== */
 
 .about-hero {
     position: relative;
-    min-height: 75vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     background-size: cover;
@@ -550,17 +1049,24 @@ a {
 
 .about-hero h2 {
     color: var(--white);
-    font-size: 2.5rem;
+    font-size: 30px;
     line-height: 1.35;
     margin-bottom: 30px;
+    font-weight: 400;
+    font-family: var(--font-heading);
     font-weight: 400;
 }
 
 .about-hero p {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    max-width: 800px;
+    font-size: 20px;
+    line-height: 40px;
+    max-width: 900px;
     opacity: 0.95;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    height: 80px;
+    width: 808px;
 }
 
 .about-leadership {
@@ -571,12 +1077,15 @@ a {
 .leadership-container {
     max-width: 1100px; /* Wider text block */
     text-align: center;
+    margin-left: 10px;
 }
 
 .leadership-container h2 {
-    font-size: 2.2rem;
+    font-size: 30px;
     margin-bottom: 50px;
-    text-align: left; /* Align title left according to the visual design, if it applies */
+    text-align: left;
+    font-weight: 400;
+    /* Align title left according to the visual design, if it applies */
 }
 
 .leadership-container p {
@@ -593,8 +1102,10 @@ a {
 }
 
 .about-operate h2 {
-    font-size: 2.2rem;
+    font-size: 30px;
     margin-bottom: 50px;
+    font-family: var(--font-heading);
+    font-weight: 400;
 }
 
 .operate-grid {
@@ -626,12 +1137,17 @@ a {
 }
 
 .philosophy-container h2 {
-    font-size: 2.2rem;
+    font-size: 30px;
     margin-bottom: 40px;
+    font-family: var(--font-heading);
+    font-weight: 400;
 }
 
 .philosophy-content {
     display: flex;
+}
+.philosophy-container {
+  margin-left: 10px;
 }
 
 .philosophy-accent-line {
@@ -659,8 +1175,10 @@ a {
 }
 
 .contact-info h2 {
-    font-size: 2.2rem;
+    font-size: 30px;
     margin-bottom: 40px;
+    font-family: var(--font-heading);
+    font-weight: 400;
 }
 
 .contact-block {
@@ -732,29 +1250,31 @@ a {
     background-color: #1A1F2E;
     color: var(--white);
     padding: 80px 0 120px;
-    min-height: 50vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
 .advisory-hero .container {
-    max-width: 1100px;
+    max-width: 881px;
 }
 
 .advisory-heading {
     color: var(--white);
-    font-size: 2.5rem;
+    font-size: 30px;
     line-height: 1.35;
     margin-bottom: 30px;
     font-weight: 400;
 }
 
 .advisory-subheading {
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1.6;
     max-width: 800px;
     opacity: 0.95;
     color: var(--white);
+    font-family: var(--font-heading);
+    font-weight: 400;
 }
 
 .advisory-focus {
@@ -763,8 +1283,13 @@ a {
 }
 
 .focus-container h2 {
-    font-size: 2.2rem;
+    font-size: 30px;
     margin-bottom: 50px;
+    font-family: var(--font-heading);
+    line-height: 40px;
+    font-weight: 400;
+
+    
 }
 
 .focus-grid {
@@ -781,11 +1306,13 @@ a {
     font-size: 1.15rem;
     line-height: 1.8;
     color: var(--dark-text);
+    font-family: var(--font-heading);
+    font-weight: 400;
 }
 
 .focus-divider {
     width: 1px;
-    background-color: #D1D5DB;
+    background-color: #6B7280;
     margin: 0 80px;
 }
 
@@ -801,7 +1328,8 @@ a {
     font-size: 1.15rem;
     color: var(--dark-text);
     margin-bottom: 30px;
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
+    font-weight: 400;
 }
 
 .focus-list li:last-child {
@@ -816,8 +1344,11 @@ a {
 
 .work-container h2 {
     color: #203A66;
-    font-size: 2.2rem;
+    font-size: 30px;
     margin-bottom: 50px;
+    font-family: var(--font-heading);
+    line-height: 40px;
+    font-weight: 400;
 }
 
 .work-content {
@@ -826,7 +1357,7 @@ a {
 
 .work-accent-line {
     width: 2px;
-    background-color: var(--gold-accent); /* Using the brand gold for the accent line as it contrasts well against the dark grey */
+    background-color: #6B7280; /* Using the brand gold for the accent line as it contrasts well against the dark grey */
     margin-right: 30px;
     min-height: 100%;
 }
@@ -842,7 +1373,7 @@ a {
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 70vh; /* Large full-width image */
+    min-height: 100vh; /* Large full-width image */
 }
 
 /* ==========================================================

@@ -4,11 +4,11 @@ const About = () => {
     return (
         <main>
             {/* Hero Section */}
-            <section className="about-hero" style={{ backgroundImage: `url('/about-hero.png')` }}>
+            <section className="about-hero" style={{ backgroundImage: `url('aboutbuddy.jpg')` }}>
                 <div className="hero-overlay"></div>
                 <div className="hero-content container">
-                    <h2>The firm combines disciplined capital structuring, specialist execution capability and senior advisory experience, anchored in the UK and operating internationally</h2>
-                    <p>Oakstone Partners operates across capital markets, specialist finance and corporate advisory</p>
+                    <h2>The firm combines disciplined capital structuring, specialist execution capability and senior advisory experience, anchored in the UK and operating internationally.</h2>
+                    <p>Oakstone Partners operates across capital markets, specialist finance and corporate advisory .</p>
                 </div>
             </section>
 

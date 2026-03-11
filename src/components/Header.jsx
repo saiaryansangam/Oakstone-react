@@ -15,10 +15,10 @@ const Header = ({ isCapitalPage = false }) => {
             <nav className="nav-links">
                 <NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
                 <NavLink to="/capital" className={({ isActive }) => isActive ? "active" : ""}>Capital</NavLink>
-                <a href="#">Finance</a>
+                <NavLink to="/finance" className={({ isActive }) => isActive ? "active" : ""}>Finance</NavLink>
+                <NavLink to="/invest" className={({ isActive }) => isActive ? "active" : ""}>Invest</NavLink>
                 <NavLink to="/advisory" className={({ isActive }) => isActive ? "active" : ""}>Advisory</NavLink>
                 <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About</NavLink>
-                <a href="#">Invest</a>
             </nav>
         </div>
     </header>

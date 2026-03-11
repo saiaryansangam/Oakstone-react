@@ -51,7 +51,7 @@ const Advisory = () => {
             </section>
 
             {/* Image Section */}
-            <section className="advisory-image-break" style={{ backgroundImage: `url('/advisory-break.png')` }}>
+            <section className="advisory-image-break" style={{ backgroundImage: `url('/advisory.jpg')` }}>
             </section>
 
         </main>

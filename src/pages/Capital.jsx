@@ -6,13 +6,13 @@ const Capital = () => {
             {/* First Section: Intro */}
             <section className="capital-intro">
                 <div className="container capital-intro-container">
-                    <h2>Oakstone Capital is a boutique private credit and debt capital markets firm specialising in curated global fixed income investment products delivered through a network of international partners</h2>
+                    <h2>Oakstone Capital is a boutique private credit and debt capital markets firm specialising in curated global fixed income investment products delivered through a network of international partners.</h2>
                     <p>The firm provides capital to real estate related projects and adjacent businesses, focusing on asset-backed strategies designed to generate risk-adjusted income with disciplined downside protection.</p>
                 </div>
             </section>
 
             {/* Image Break Section */}
-            <section className="capital-image-break" style={{ backgroundImage: `url('/stpauls.png')` }}>
+            <section className="capital-image-break" style={{ backgroundImage: `url('/capital.jpg')` }}>
             </section>
 
             {/* What We Do Section */}
