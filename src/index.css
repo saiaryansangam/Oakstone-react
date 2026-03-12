@@ -2,6 +2,7 @@
    CSS Resets & Variables
    ========================================================== */
 
+   
 :root {
     /* Color Palette */
     --primary-navy: #243B63;
@@ -39,6 +40,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--primary-navy);
@@ -50,6 +52,10 @@ a {
     color: inherit;
     transition: color 0.3s ease;
 }
+
+
+
+
 
 /* ==========================================================
    Layout & Container Utilities
@@ -81,6 +87,41 @@ a {
     z-index: 100;
     padding: 15px 0;
     background: rgba(0, 0, 0, 0.25); /* Semi transparent dark overlay */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger-line.open:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-line.open:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 .nav-container {
@@ -515,6 +556,7 @@ a {
 .capital-focus .container,
 .capital-focus .container-medium {
     margin-left: 0;
+    margin-left: 36px;
     margin-right: auto;
     text-align: left;
 }
@@ -522,6 +564,7 @@ a {
 .capital-operating {
     background-color: var(--light-grey);
     padding: 100px 0;
+    
 }
 
 .capital-operating h2 {
@@ -1392,19 +1435,104 @@ a {
     .contact-grid {
         gap: 40px;
     }
+    
+    /* Capital page responsive */
+    .capital-intro h2 {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+    
+    .capital-intro p {
+        font-size: 1.1rem;
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    /* Finance page responsive */
+    .finance-hero h2 {
+        font-size: 2.2rem;
+    }
+    
+    .finance-hero p {
+        font-size: 1.1rem;
+        max-width: 600px;
+    }
+    
+    .finance-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Invest page responsive */
+    .invest-hero h2 {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+    
+    .invest-hero p {
+        font-size: 1.1rem;
+        max-width: 600px;
+    }
+    
+    .invest-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Advisory page responsive */
+    .advisory-hero .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 768px) {
     .nav-container {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         padding: 0 20px;
     }
     
+    .hamburger {
+        display: flex;
+    }
+    
     .nav-links {
-        margin-top: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 100px;
+        gap: 30px;
+        transition: right 0.3s ease;
+        z-index: 100;
+    }
+    
+    .nav-links.nav-open {
+        right: 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        color: var(--white);
+        text-align: center;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+    }
+    
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-links a.active {
+        color: var(--gold-accent);
+        background-color: rgba(255, 255, 255, 0.1);
     }
     
     .hero, .about-hero {
@@ -1427,7 +1555,7 @@ a {
     }
 
     .operate-grid, .focus-grid {
-        flex-direction: column;
+        flex-direction:column;
     }
 
     .operate-divider, .focus-divider {
@@ -1439,10 +1567,364 @@ a {
     .contact-grid {
         grid-template-columns: 1fr;
     }
+    
+    /* Capital page mobile */
+    .capital-intro {
+        padding-top: 150px;
+        padding-bottom: 100px;
+        min-height: 70vh;
+    }
+    
+    .capital-intro-container {
+        padding-left: 20px;
+        max-width: 100%;
+    }
+    
+    .capital-intro h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+        margin-bottom: 25px;
+    }
+    
+    .capital-intro p {
+        font-size: 1rem;
+        line-height: 1.6;
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+    
+    .capital-image-break {
+        min-height: 50vh;
+    }
+    
+    .capital-what-we-do .service-col {
+        text-align: center;
+    }
+    
+    .capital-focus h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .capital-focus p {
+        text-align: center;
+    }
+    
+    /* Finance page mobile */
+    .finance-hero {
+        padding-top: 150px;
+        padding-bottom: 100px;
+        min-height: 70vh;
+    }
+    
+    .finance-hero-container {
+        padding-left: 20px;
+        max-width: 100%;
+    }
+    
+    .finance-hero h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    .finance-hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: none;
+    }
+    
+    .finance-image-break {
+        min-height: 50vh;
+    }
+    
+    .finance-description-container {
+        padding: 0 20px;
+    }
+    
+    .finance-strategic-container {
+        padding: 0 20px;
+    }
+    
+    .finance-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .finance-col {
+        text-align: center;
+    }
+    
+    .finance-visit-container {
+        padding: 0 20px;
+    }
+    
+    /* Invest page mobile */
+    .invest-hero {
+        padding-top: 150px;
+        padding-bottom: 100px;
+        min-height: 70vh;
+    }
+    
+    .invest-hero-container {
+        padding-left: 20px;
+        max-width: 100%;
+    }
+    
+    .invest-hero h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+        margin-bottom: 25px;
+    }
+    
+    .invest-hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: none;
+    }
+    
+    .invest-image-break {
+        min-height: 50vh;
+    }
+    
+    .invest-what-we-do-container,
+    .invest-investment-strategies-container,
+    .invest-strategies-grid-container,
+    .invest-how-access-works-container,
+    .invest-governance-reporting-container {
+        padding: 0 20px;
+    }
+    
+    .invest-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .invest-col {
+        text-align: center;
+    }
+    
+    .invest-visit-container {
+        padding: 0 20px;
+    }
+    
+    /* Advisory page mobile */
+    .advisory-hero {
+        padding-top: 150px;
+        padding-bottom: 100px;
+        min-height: 70vh;
+    }
+    
+    .advisory-hero .container {
+        padding: 0 20px;
+        max-width: 100%;
+    }
+    
+    .advisory-heading {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .advisory-subheading {
+        font-size: 1rem;
+        text-align: center;
+        max-width: none;
+    }
+    
+    .advisory-image-break {
+        min-height: 50vh;
+    }
+    
+    /* About page mobile */
+    .about-hero {
+        padding-top: 150px;
+        padding-bottom: 100px;
+        min-height: 70vh;
+    }
+    
+    .about-hero .hero-content {
+        padding: 0 20px;
+    }
+    
+    .about-hero h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        max-width: none;
+    }
+    
+    .about-hero p {
+        font-size: 1rem;
+        text-align: center;
+        max-width: none;
+        width: auto;
+        height: auto;
+    }
+    
+    .about-image-break {
+        min-height: 50vh;
+    }
+    
+    .leadership-container,
+    .about-operate-container,
+    .philosophy-container,
+    .contact-info {
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .leadership-container h2,
+    .about-operate h2,
+    .philosophy-container h2,
+    .contact-info h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .operate-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .philosophy-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .philosophy-accent-line {
+        display: none;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 
 @media (max-width: 480px) {
+    .nav-links {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-content h2, .about-hero h2, .advisory-heading {
+        font-size: 1.5rem;
+    }
+    
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Capital page small mobile */
+    .capital-intro h2 {
+        font-size: 1.5rem;
+    }
+    
+    .capital-intro p {
+        font-size: 0.95rem;
+    }
+    
+    /* Finance page small mobile */
+    .finance-hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .finance-hero p {
+        font-size: 0.95rem;
+    }
+    
+    /* Invest page small mobile */
+    .invest-hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .invest-hero p {
+        font-size: 0.95rem;
+    }
+    
+    /* Advisory page small mobile */
+    .advisory-heading {
+        font-size: 1.5rem;
+    }
+    
+    .advisory-subheading {
+        font-size: 0.95rem;
+    }
+    
+    /* About page small mobile */
+    .about-hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .about-hero p {
+        font-size: 0.95rem;
+    }
+    
+    .leadership-container h2,
+    .about-operate h2,
+    .philosophy-container h2,
+    .contact-info h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Common adjustments */
+    .container {
+        padding: 0 15px;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .finance-contact-btn,
+    .invest-contact-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
     }
 }
+
+@media (max-width: 768px) {
+
+    .operate-grid,
+    .focus-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        
+    }
+    
+    .operate-grid > div,
+    .focus-grid > div{
+        width: 100%;
+    }
+    
+    .operate-divider,
+    .focus-divider{
+        width: 100%;
+        height: 1px;
+        margin: 20px 0;
+    }
+    
+}
+
+@media (max-width:768px){
+
+.operating-grid{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.operating-grid > div{
+    width:100%;
+    max-width:100%;
+}
+
+}
+
