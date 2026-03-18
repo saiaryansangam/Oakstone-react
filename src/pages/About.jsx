@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const About = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.getElementById(location.hash.substring(1));
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    }, [location]);
     return (
         <main>
             {/* Hero Section */}
@@ -53,7 +66,7 @@ const About = () => {
             </section>
 
             {/* Contact Section */}
-            <section className="about-contact">
+            <section className="about-contact" id="contact">
                 <div className="container contact-grid">
                     
                     {/* Left Side: Contact Info */}

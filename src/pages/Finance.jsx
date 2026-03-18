@@ -58,17 +58,17 @@ const Finance = () => {
             </section>
 
             {/* Visit Oakstone Finance Section */}
-            <section className="finance-visit">
-                <div className="container finance-visit-container">
-                    <div className="finance-visit-label">MAIN PORTAL</div>
-                    <h2>Visit Oakstone Finance</h2>
-                    <p>For further detail on our UK specialist property finance services and approach, please visit our primary digital platform.</p>
-                    <button className="finance-contact-btn">Contact</button>
-                </div>
-            </section>
+            <section className="cta-section">
+        <div className="container container-narrow">
+          <h2>Visit Oakstone Finance</h2>
+          <p>For eligible investor access and distribution enquiries, and for further detail on our investor access approach and investment strategy framework, please visit the Oakstone Invest website.</p>
+          <a href="/about#contact" className="btn-primary">Contact</a>
+        </div>
+      </section>
+            
 
         </main>
     );
 };
 
-export default Finance;
+export default Finance; 

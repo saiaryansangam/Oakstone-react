@@ -4,18 +4,18 @@ const Home = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="hero" style={{ minHeight: '100vh', backgroundImage: `url('about-hero1.jpg')` }}>
+      <section className="hero" style={{ minHeight: '80vh', backgroundImage: `url('about-hero1.jpg')` }}>
         <div className="hero-overlay"></div>
-        <div className="hero-content container" style={{ paddingLeft: '100px' }}>
+        <div className="hero-content container" >
           <h2>A UK-anchored group operating<br/>internationally across capital, specialist<br/>finance and senior advisory.</h2>
           <p>Oakstone Partners works with professional partners, investors and businesses in situations where structure, capital and commercial judgement are decisive. The firm’s activities span curated fixed income and private credit strategies, specialist UK property finance, senior corporate and strategic advisory.</p>
         </div>
       </section>
 
       {/* Intro Statement Section */}
-      <section className="intro-statement">
+      <section className="intro-statement"> 
         <div className="container container-narrow">
-          <p>Across the group, we operate with a disciplined, process-led approach informed by high standards of governance and risk management, prioritising clear structuring, robust execution and commercially durable outcomes</p>
+          <p>Across the group, we operate with a disciplined, process-led approach informed by high standards of governance and risk management, prioritising clear structuring, robust execution and commercially durable outcomes.</p>
         </div>
       </section>
 
@@ -55,7 +55,7 @@ const Home = () => {
         <div className="container container-narrow">
           <h2>Partner with Oakstone</h2>
           <p>Connect with our investment desk to discuss bespoke financing solutions tailored to your unique capital structure requirements.</p>
-          <a href="#" className="btn-primary">Contact</a>
+          <a href="/about#contact" className="btn-primary">Contact</a>
         </div>
       </section>
     </main>

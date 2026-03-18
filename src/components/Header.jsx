@@ -16,11 +16,8 @@ const Header = ({ isCapitalPage = false }) => {
     <header className={`navbar ${isCapitalPage ? 'capital-navbar' : ''}`}>
         <div className="nav-container">
             <div className="logo">
-                <span className="logo-icon"></span>
-                <div className="logo-text">
-                    <h1>OAKSTONE</h1>
-                    <span className="logo-subtext">PARTNERS</span>
-                </div>
+                <img src="Group 31 (1).png" alt="Oakstone Partners" className="logo-image" />
+                
             </div>
             
             {/* Hamburger Menu Button */}

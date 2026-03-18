@@ -68,16 +68,15 @@ const Invest = () => {
             </section>
 
             {/* Visit Oakstone Invest Section */}
-            <section className="invest-visit">
-                <div className="container invest-visit-container">
-                    <h2>Visit Oakstone Invest</h2>
-                    <p>For eligible investor access and distribution enquiries, and for further detail on our investor access approach and investment strategy framework, please visit the Oakstone Invest website.</p>
-                    <button className="invest-contact-btn">Contact</button>
-                    <div className="invest-disclaimer">
-                        <p>Access to strategies is provided through regulated distribution partners and aligned platforms. Eligibility requirements apply. Information is provided for general information only and does not constitute an offer, solicitation or investment advice.</p>
-                    </div>
-                </div>
-            </section>
+           <section className="cta-section">
+        <div className="container container-narrow">
+          <h2>Visit Oakstone Invest</h2>
+          <p>For eligible investor access and distribution enquiries, and for further detail on our investor access approach and investment strategy framework, please visit the Oakstone Invest website.</p>
+         
+          <a href="/about#contact" className="btn-primary">Contact</a>
+          <p>Access to strategies is provided through regulated distribution partners and aligned platforms. Eligibility requirements apply. Information is provided for general information only and does not constitute an offer, solicitation or investment advice.</p>
+        </div>
+      </section>
 
         </main>
     );

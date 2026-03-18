@@ -4,7 +4,7 @@ const Capital = () => {
     return (
         <main>
             {/* First Section: Intro */}
-            <section className="capital-intro">
+            <section className="capital-intro" style={{ minHeight: '80vh' }}>
                 <div className="container capital-intro-container">
                     <h2>Oakstone Capital is a boutique private credit and debt capital markets firm specialising in curated global fixed income investment products delivered through a network of international partners.</h2>
                     <p>The firm provides capital to real estate related projects and adjacent businesses, focusing on asset-backed strategies designed to generate risk-adjusted income with disciplined downside protection.</p>

@@ -13,18 +13,18 @@ const Footer = ({ isCapitalPage = false }) => {
             <div className="footer-col links-col">
                 <h4 className="footer-heading">Firm</h4>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/about#contact">Contact</a></li>
                 </ul>
             </div>
 
             <div className="footer-col links-col">
                 <h4 className="footer-heading">Services</h4>
                 <ul>
-                    <li><a href="#">Capital</a></li>
-                    <li><a href="#">Finance</a></li>
-                    <li><a href="#">Advisory</a></li>
-                    <li><a href="#">Invest</a></li>
+                    <li><a href="/capital">Capital</a></li>
+                    <li><a href="/finance">Finance</a></li>
+                    <li><a href="/advisory">Advisory</a></li>
+                    <li><a href="/invest">Invest</a></li>
                 </ul>
             </div>
 
@@ -41,11 +41,8 @@ const Footer = ({ isCapitalPage = false }) => {
                     &copy; 2026 OAKSTONE PARTNER
                 </div>
                 <div className="footer-legal-links">
-                    <a href="#">LEGAL & REGULATORY</a>
-                    <span className="divider">|</span>
-                    <a href="#">PRIVACY POLICY</a>
-                    <span className="divider">|</span>
-                    <a href="#">COOKIE POLICY</a>
+                    
+                   
                 </div>
             </div>
         )}
