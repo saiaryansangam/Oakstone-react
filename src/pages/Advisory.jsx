@@ -11,6 +11,15 @@ const Advisory = () => {
                 </div>
             </section>
 
+            {/* Oakstone Advisory Section */}
+            <section className="advisory-intro">
+                <div className="container container-medium">
+                    <h2>Oakstone Advisory</h2>
+                    <p>Oakstone Advisory provides senior corporate and strategic advisory services to principals, investors and businesses operating internationally.</p>
+                    <p>The practice is engaged in situations requiring experience-led judgement and discretion, often involving complex financial, strategic and cross-border considerations.</p>
+                </div>
+            </section>
+
             {/* Areas of Focus Section */}
             <section className="advisory-focus">
                 <div className="container focus-container">
@@ -27,7 +36,8 @@ const Advisory = () => {
                             <ul className="focus-list">
                                 <li>Capital structuring and strategic finance</li>
                                 <li>Growth, repositioning and expansion initiatives</li>
-                                <li>Operational support and restructuring</li>
+                                <li>Operational support and restructuring  and stakeholder management</li>
+                                <li>Cross-border and international advisory mandates</li>
                             </ul>
                         </div>
                     </div>
@@ -42,13 +52,21 @@ const Advisory = () => {
                     <div className="work-content">
                         <div className="work-accent-line"></div>
                         <div className="work-text">
-                            <p>Oakstone Advisory works closely with clients on a selective basis, engaging in situations where experience, judgement and discretion are central to the outcome.</p>
+                            <p>
+Oakstone Advisory engages selectively, working closely with clients where judgement and discretion are central to the outcome. Mandates are approached with clear scope, direct senior involvement and disciplined analysis.</p>
                             <br />
-                            <p>The practice is characterised by thoughtful analysis, direct engagement and a focus on supporting material change in complex or transitional environments.</p>
+                            <p>The practice is characterised by thoughtful, pragmatic advice and a focus on supporting material decisions and change in complex or transitional environments.</p>
                         </div>
                     </div>
                 </div>
             </section>
+            <section className="cta-section">
+        <div className="container container-narrow">
+          <h2>Contact Oakstone Partners</h2>
+          <p>To discuss a corporate or strategic advisory mandate, please contact us.</p>
+          <a href="/about#contact" className="btn-primary"> Contact</a>
+        </div>
+      </section>
 
             {/* Image Section */}
             <section className="advisory-image-break" style={{ backgroundImage: `url('/advisory.jpg')` }}>

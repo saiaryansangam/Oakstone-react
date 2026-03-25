@@ -16,7 +16,7 @@ const Header = ({ isCapitalPage = false }) => {
     <header className={`navbar ${isCapitalPage ? 'capital-navbar' : ''}`}>
         <div className="nav-container">
             <div className="logo">
-                <img src="Group 31 (1).png" alt="Oakstone Partners" className="logo-image" />
+                <img src="newlogo.jpg" alt="Oakstone Partners" className="logo-image" />
                 
             </div>
             
@@ -31,10 +31,11 @@ const Header = ({ isCapitalPage = false }) => {
             <nav className={`nav-links ${isMenuOpen ? 'nav-open' : ''}`}>
                 <NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""} onClick={closeMenu}>Home</NavLink>
                 <NavLink to="/capital" className={({ isActive }) => isActive ? "active" : ""} onClick={closeMenu}>Capital</NavLink>
-                <NavLink to="/finance" className={({ isActive }) => isActive ? "active" : ""} onClick={closeMenu}>Finance</NavLink>
                 <NavLink to="/invest" className={({ isActive }) => isActive ? "active" : ""} onClick={closeMenu}>Invest</NavLink>
+                <NavLink to="/Finance" className={({ isActive }) => isActive ? "active" : ""} onClick={closeMenu}>Finance</NavLink>
                 <NavLink to="/advisory" className={({ isActive }) => isActive ? "active" : ""} onClick={closeMenu}>Advisory</NavLink>
                 <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""} onClick={closeMenu}>About</NavLink>
+                <NavLink to="/about#contact" className={({ isActive }) => isActive ? "active" : ""} onClick={closeMenu}>Contact</NavLink>
             </nav>
         </div>
     </header>

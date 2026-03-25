@@ -26,16 +26,29 @@ const Home = () => {
           <div className="service-col">
             <h3>Capital</h3>
             <p>Curated fixed income products and capital deployment into asset-backed real estate and related businesses.</p>
+            <a href="/capital" className="service-link">Learn more about Oakstone Capital <span className="arrow">→</span>
+            </a>
+          </div>
+
+          <div className="service-col">
+            <h3>Invest</h3>
+            <p>Investor access gateway for eligible investors to Oakstone-curated UK real estate–secured strategies spanning asset-backed fixed income and profit participation, delivered through regulated distribution partners and aligned platforms.</p>
+            <a href="/invest" className="service-link">Learn more about Oakstone Invest <span className="arrow">→</span>
+            </a>
           </div>
 
           <div className="service-col">
             <h3>Finance</h3>
             <p>Specialist UK property finance brokerage supporting borrowers and intermediaries across straightforward and complex lending scenarios.</p>
+            <a href="/finance" className="service-link">Learn more about Oakstone Finance <span className="arrow">→</span>
+            </a>
           </div>
 
           <div className="service-col">
             <h3>Advisory</h3>
             <p>Senior corporate and strategic advisory services for principals, and businesses operating internationally.</p>
+            <a href="/advisory" className="service-link">Learn more about Oakstone Advisory <span className="arrow">→</span>
+            </a>
           </div>
 
         </div>
@@ -53,11 +66,13 @@ const Home = () => {
       {/* Call to Action Section */}
       <section className="cta-section">
         <div className="container container-narrow">
-          <h2>Partner with Oakstone</h2>
-          <p>Connect with our investment desk to discuss bespoke financing solutions tailored to your unique capital structure requirements.</p>
-          <a href="/about#contact" className="btn-primary">Contact</a>
+          <h2>Contact Oakstone Partners</h2>
+          <p>To discuss capital allocation, UK specialist property finance, or an advisory mandate, please contact us.</p>
+          <a href="/about#contact" className="btn-primary"> Contact</a>
         </div>
       </section>
+
+      
     </main>
   );
 };

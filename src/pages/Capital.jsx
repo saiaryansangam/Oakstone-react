@@ -4,7 +4,7 @@ const Capital = () => {
     return (
         <main>
             {/* First Section: Intro */}
-            <section className="capital-intro" style={{ minHeight: '80vh' }}>
+            <section className="capital-intro"  >
                 <div className="container capital-intro-container">
                     <h2>Oakstone Capital is a boutique private credit and debt capital markets firm specialising in curated global fixed income investment products delivered through a network of international partners.</h2>
                     <p>The firm provides capital to real estate related projects and adjacent businesses, focusing on asset-backed strategies designed to generate risk-adjusted income with disciplined downside protection.</p>
@@ -19,25 +19,8 @@ const Capital = () => {
             <section className="capital-what-we-do">
                 <div className="container">
                     <h2>What We Do</h2>
-                    
-                    <div className="services-grid">
-                        
-                        <div className="service-col">
-                            <h3>Curated Fixed Income</h3>
-                            <p>Structured fixed income products backed by tangible real assets, designed to deliver predictable and stable returns.</p>
-                        </div>
-
-                        <div className="service-col">
-                            <h3>Asset-Backed Strategies</h3>
-                            <p>Secured investment strategies focused on real estate and related sectors, generating consistent income with risk mitigation.</p>
-                        </div>
-
-                        <div className="service-col">
-                            <h3>Regulated Distribution</h3>
-                            <p>Products distributed through regulated partners and aligned platforms, ensuring compliance and investor confidence.</p>
-                        </div>
-
-                    </div>
+                    <p>Oakstone Capital originates, curates and structures fixed income products supported by underlying real assets. Products are distributed through regulated partners and aligned investment platforms, while Oakstone focuses on origination, structuring, underwriting discipline and capital deployment.</p>
+                    <p>Activities are centred on generating stable income from secured, asset-backed strategies across real estate and related sectors, with a focus on downside protection, covenant strength and clear exit pathways.</p>
                 </div>
             </section>
 
@@ -70,6 +53,15 @@ const Capital = () => {
 
                     </div>
                 </div>
+
+                {/* Call to Action Section */}
+      <section className="cta-section">
+        <div className="container container-narrow">
+          <h2>Contact Oakstone Partners</h2>
+          <p>To discuss Oakstone Capital, including regulated distribution partnerships and our approach to asset-backed fixed income and private credit strategies, please contact us.</p>
+          <a href="/about#contact" className="btn-primary"> Contact</a>
+        </div>
+      </section>
             </section>
 
         </main>

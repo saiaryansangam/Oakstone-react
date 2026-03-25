@@ -66,6 +66,13 @@ const Invest = () => {
                     <p>Oakstone Invest places emphasis on disciplined governance and information standards, including clear articulation of structure, security position, underwriting approach and key risk considerations. Reporting and documentation are delivered through the relevant regulated distribution channel and partner platform, supported by UK legal oversight and an emphasis on robust, enforceable security arrangements and clear information standards.</p>
                 </div>
             </section>
+             <section className="invest-governance-reporting">
+                <div className="container invest-governance-reporting-container">
+                    <h2>Distribution & Eligibility
+</h2>
+                    <p>Access to strategies is provided through regulated distribution partners and aligned platforms. Eligibility requirements apply. Information is provided for general information only and does not constitute an offer, solicitation or investment advice.</p>
+                </div>
+            </section>
 
             {/* Visit Oakstone Invest Section */}
            <section className="cta-section">
@@ -73,8 +80,8 @@ const Invest = () => {
           <h2>Visit Oakstone Invest</h2>
           <p>For eligible investor access and distribution enquiries, and for further detail on our investor access approach and investment strategy framework, please visit the Oakstone Invest website.</p>
          
-          <a href="/about#contact" className="btn-primary">Contact</a>
-          <p>Access to strategies is provided through regulated distribution partners and aligned platforms. Eligibility requirements apply. Information is provided for general information only and does not constitute an offer, solicitation or investment advice.</p>
+          <a href="/about#contact" className="btn-primary"> Visit Oakstone Invest</a>
+          
         </div>
       </section>
 
